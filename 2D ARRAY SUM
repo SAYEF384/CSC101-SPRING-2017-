@@ -1,0 +1,67 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+int main()
+{
+    int A[3][2] , B[3][2] , C[3][2];
+    int n = 3, m = 2, ll = 0, ul = 5;
+    //int sum0 = 0 , sum1 = 0;
+
+    //POPULATE A
+    srand(time(0));
+    for (int i = 0;i < n;i++)
+    {
+        for (int j = 0;j < m;j++)
+            A[i][j] = ll + rand() % (ul - ll + 1);
+    }
+
+    //DISPLAY A
+    cout<<"Array Elements A:\n";
+    for (int i = 0;i < n;i++)
+    {
+        for (int j = 0;j < m;j++)
+            cout<<A[i][j]<<" ";
+        cout<<endl;
+    }
+    
+    
+     //POPULATE B
+    for (int i = 0;i < n;i++)
+    {
+        for (int j = 0;j < m;j++)
+            B[i][j] = ll + rand() % (ul - ll + 1);
+    }
+
+    //DISPLAY B
+    cout<<"Array Elements B:\n";
+    for (int i = 0;i < n;i++)
+    {
+        for (int j = 0;j < m;j++)
+            cout<<B[i][j]<<" ";
+        cout<<endl;
+    }
+     //POPULATE C
+
+    for (int i = 0;i < n;i++)
+    {
+        for (int j = 0;j < m;j++)
+            C[i][j] = A[i][j] + B[i][j];
+    }
+
+    //DISPLAY C
+    cout<<"Array Elements C:\n";
+    for (int i = 0;i < n;i++)
+    {
+        for (int j = 0;j < m;j++)
+            cout<<C[i][j]<<" ";
+            cout<<endl;
+    }
+    
+    
+    
+
+    return 0;
+
+}
