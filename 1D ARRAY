@@ -1,0 +1,745 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    int A[5] , B[5] , C[5] , D[5] , E[5] , F[5] , H[10] , I[7] , n = 5 , u = 10 , s = 7, ll = 0 , ul = 20;
+    int G[10] , p = 10;
+    int J[20] , K[20] , L[20] , M[20] , yo = 21;
+
+    //POPULATE AND DISPLAY A
+    srand(time(NULL));
+    cout<<"Array A Elements : ";
+    for (int i = 0 ; i < n ; i++)
+       {
+        A[i] = ll + rand () % (ul-ll+1);
+        cout<<A[i]<<" ";
+       }
+
+    //POPULATE AND DISPLAY B
+    cout<<endl<<endl;
+    cout<<"Array B Elements : ";
+    for (int i = 0 ; i < n ; i++)
+       {
+        B[i] = ll + rand () % (ul-ll+1);
+        cout<<B[i]<<" ";
+       }
+
+    //POPULATE AND DISPLAY C
+    cout<<endl<<endl;
+    cout<<"Array C Elements : ";
+    for (int i = 0 ; i < n ; i++)
+       {
+        C[i] = ll + rand () % (ul-ll+1);
+        cout<<C[i]<<" ";
+       }
+
+
+    //POPULATE AND DISPLAY D
+    cout<<endl<<endl;
+    cout<<"Array D Elements : ";
+    for (int i = 0 ; i < n ; i++)
+       {
+        D[i] = ll + rand () % (ul-ll+1);
+        cout<<D[i]<<" ";
+       }
+
+        cout<<endl<<endl;
+        int llex=0 , ulex=1;
+        cout<<"Array F Elements (BINARY) : ";
+        for (int i = 0 ; i < n ; i++)
+        {
+         F[i] = llex + rand () % (ulex-llex+1);
+         cout<<F[i]<<" ";
+        }
+
+
+       //POPULATE AND DISPLAY SUM OF A,B,C,D
+       cout<<endl<<endl;
+       cout<<"Array E Elements (SUM) : ";
+       for (int i = 0 ; i < n ; i++)
+       {
+           E[i] = A[i] + B[i] + C[i] + D[i];
+           cout<<E[i]<<" ";
+
+       }
+
+       //POPULATE AND DISPLAY SUBSTRACTION OF A,B,C,D
+       cout<<endl<<endl;
+       cout<<"Array E Elements (SUB) : ";
+       for (int i = 0 ; i < n ; i++)
+       {
+           E[i] = A[i] - B[i] - C[i] - D[i];
+           cout<<E[i]<<" ";
+
+       }
+
+        //POPULATE AND DISPLAY MULTIPLICATION OF A,B,C,D
+       cout<<endl<<endl;
+       cout<<"Array E Elements (MULTI) : ";
+       for (int i = 0 ; i < n ; i++)
+       {
+           E[i] = A[i] * B[i] * C[i] * D[i];
+           cout<<E[i]<<" ";
+
+       }
+
+      //MAX
+      cout<<endl<<endl;
+      int mx = A[0] ;
+      //mx = B[0] ;
+      //mx = C[0] ;
+      //mx = D[0] ;
+      for (int i = 0 ; i < n ; i++)
+       {
+         if (mx < A [i] ) mx = A[i];
+      if (mx < B [i]) mx = B[i];
+      if (mx < C [i]) mx = C[i];
+      if (mx < D [i]) mx = D[i];
+
+       }
+
+      cout<<"MaX Is = "<<mx;
+
+     /*//SORTED ARRAY MAX
+      int temp;
+
+      for (int i = 0 ; i < n ; i++)
+      {
+          for (int j = i ; j < n ; j++)
+        {
+
+            if (A[j]<A[i])
+          {
+            temp = A[i];
+            A[i] = A[j];
+            A[j] = temp;
+          }
+
+            if (B[j]<B[i])
+            {
+              temp = B[i];
+              B[i] = B[j];
+              B[j] = temp;
+            }
+
+             if (C[j]<C[i])
+            {
+              temp = C[i];
+              C[i] = C[j];
+              C[j] = temp;
+            }
+
+             if (D[j]<D[i])
+            {
+              temp = D[i];
+              D[i] = D[j];
+              D[j] = temp;
+            }
+        }
+      }
+
+      //SORTED ARRAY DISPLAY
+      cout<<endl<<endl;
+      cout<<"After Sorting Max for A : ";
+      for (int i = 0 ; i < n ; i++)
+      cout<<A[i]<<" ";
+
+      cout<<endl<<endl;
+      cout<<"After Sorting Max for B : ";
+      for (int i = 0 ; i < n ; i++)
+        cout<<B[i]<<" ";
+
+      cout<<endl<<endl;
+      cout<<"After Sorting Max for C : ";
+      for (int i = 0 ; i < n ; i++)
+        cout<<C[i]<<" ";
+
+      cout<<endl<<endl;
+      cout<<"After Sorting Max for D : ";
+      for (int i = 0 ; i < n ; i++)
+        cout<<D[i]<<" ";*/
+
+        //SUM
+        cout<<endl<<endl;
+        int sum = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+            sum = sum + A[i];
+        }
+
+        cout<<"Sum Of Array A : "<<sum<<endl;
+
+        cout<<endl;
+        int sum1 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+            sum1 = sum1 + B[i];
+        }
+
+        cout<<"Sum Of Array B : "<<sum1<<endl;
+
+        cout<<endl;
+        int sum2 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+            sum2 = sum2 + C[i];
+        }
+
+        cout<<"Sum Of Array C : "<<sum2<<endl;
+
+        cout<<endl;
+        int sum3 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+            sum3 = sum3 + D[i];
+        }
+
+        cout<<"Sum Of Array D : "<<sum3<<endl;
+
+        //SUBTRACTION
+        cout<<endl;
+        int sub = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+            sub = sub - A[i];
+        }
+        cout<<"Sub Of Array A : "<<sub<<endl;
+
+        cout<<endl;
+        int sub1 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+            sub1 = sub1 - B[i];
+        }
+        cout<<"Sub Of Array B : "<<sub1<<endl;
+
+        cout<<endl;
+        int sub2 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+            sub2 = sub2 - C[i];
+        }
+        cout<<"Sub Of Array C : "<<sub2<<endl;
+
+        cout<<endl;
+        int sub3 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+            sub3 = sub3 - D[i];
+        }
+        cout<<"Sub Of Array D : "<<sub3<<endl;
+
+        //MULTIPLICATION
+        cout<<endl;
+        int mul = 1;
+        for (int i = 0 ; i < n ; i++)
+        {
+            mul = mul * A[i];
+        }
+        cout<<"Mul Of Array A : "<<mul<<endl;
+
+        cout<<endl;
+        int mul1 = 1;
+        for (int i = 0 ; i < n ; i++)
+        {
+            mul1 = mul1 * B[i];
+        }
+        cout<<"Mul Of Array B : "<<mul1<<endl;
+
+        cout<<endl;
+        int mul2 = 1;
+        for (int i = 0 ; i < n ; i++)
+        {
+            mul2 = mul2 * C[i];
+        }
+        cout<<"Mul Of Array C : "<<mul2<<endl;
+
+        cout<<endl;
+        int mul3 = 1;
+        for (int i = 0 ; i < n ; i++)
+        {
+            mul3 = mul3 * D[i];
+        }
+        cout<<"Mul Of Array D : "<<mul3<<endl;
+
+       //PLOTING GRAPH SORTED ARRAY
+       cout<<endl;
+       cout<<"Stars for A (Sorted) : "<<endl<<endl;
+       for (int i = 0 ; i < n ; i++)
+       {
+           for (int st = 1 ; st <= A[i] ; st++)
+            cout<<"*";
+            cout<<endl;
+       }
+
+       cout<<endl;
+       cout<<"Stars for B (Sorted) : "<<endl<<endl;
+       for (int i = 0 ; i < n ; i++)
+       {
+           for (int st = 1 ; st <= B[i] ; st++)
+            cout<<"*";
+            cout<<endl;
+       }
+
+       cout<<endl;
+       cout<<"Stars for C (Sorted) : "<<endl<<endl;
+       for (int i = 0 ; i < n ; i++)
+       {
+           for (int st = 1 ; st <= C[i] ; st++)
+            cout<<"*";
+            cout<<endl;
+       }
+
+       cout<<endl;
+       cout<<"Stars for D (Sorted) : "<<endl<<endl;
+       for (int i = 0 ; i < n ; i++)
+       {
+           for (int st = 1 ; st <= D[i] ; st++)
+            cout<<"*";
+            cout<<endl;
+       }
+
+       //LINEAR SEARCH
+       cout<<endl;
+       cout<<"Welcome To Sorted Linear Search (Array)"<<endl<<endl;
+       int x;
+       cout<<"Enter A Number For Array 'A' : ";
+       cin>>x;
+       cout<<endl;
+
+       int i;
+       cout<<"Sorted Array Linear Search For Array A : \t";
+       for (i = 0 ; i < n ; i++)
+       {
+           if (x == A[i])
+           {
+               cout<<x<<" Is Found At Location : "<<i<<endl;
+               break;
+           }
+
+       }
+       if(i == n)
+        cout<<x<<" Is Not Found In Any Location"<<endl;
+
+
+       cout<<endl;
+       int y;
+       cout<<"Enter A Number For Array 'B' : ";
+       cin>>y;
+       cout<<endl;
+
+       cout<<"Sorted Array Linear Search For Array B : \t";
+       for (i = 0 ; i < n ; i++)
+       {
+           if (y == B[i])
+           {
+               cout<<y<<" Is Found At Location : "<<i<<endl;
+               break;
+           }
+
+       }
+       if(i == n)
+        cout<<y<<" Is Not Found In Any Location"<<endl;
+
+       cout<<endl;
+       int z;
+       cout<<"Enter A Number For Array 'C' : ";
+       cin>>z;
+       cout<<endl;
+
+       cout<<"Sorted Array Linear Search For Array C : \t";
+       for (i = 0 ; i < n ; i++)
+       {
+           if (z == C[i])
+           {
+               cout<<z<<" Is Found At Location : "<<i<<endl;
+               break;
+           }
+
+       }
+       if(i == n)
+        cout<<z<<" Is Not Found In Any Location"<<endl;
+
+
+       cout<<endl;
+       int l;
+       cout<<"Enter A Number For Array 'D' : ";
+       cin>>l;
+       cout<<endl;
+
+       cout<<"Sorted Array Linear Search For Array D : \t";
+       for (i = 0 ; i < n ; i++)
+       {
+           if (l == D[i])
+           {
+               cout<<l<<" Is Found At Location : "<<i<<endl;
+               break;
+           }
+
+       }
+       if(i == n)
+        cout<<l<<" Is Not Found In Any Location"<<endl;
+
+        //BINARY SUM
+
+        //A
+        cout<<endl<<endl;
+        cout<<"Welcome To Binary World -----"<<endl;
+        int SUM0 = 0 , SUM1 = 0 ;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                SUM0 += A[i];
+            else
+                SUM1 += A[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary SUM For Array 'A' : "<<SUM0 - SUM1<<endl;
+
+        //B
+        cout<<endl<<endl;
+        int SUM2 = 0 , SUM3 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                SUM2 += B[i];
+            else
+                SUM3 += B[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary SUM For Array 'B' : "<<SUM2 - SUM3<<endl;
+
+
+
+        //C
+        cout<<endl<<endl;
+        int SUM4 = 0 , SUM5 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                SUM4 += C[i];
+            else
+                SUM5 += C[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary SUM For Array 'C' : "<<SUM4 - SUM5<<endl;
+
+
+
+        //D
+        cout<<endl<<endl;
+        int SUM6 = 0 , SUM7 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                SUM6 += D[i];
+            else
+                SUM7 += D[i];
+
+        }
+
+
+
+        cout<<endl;
+
+        cout<<"Binary SUM For Array 'D' : "<<SUM6 - SUM7<<endl;
+
+
+        //Binary Subtraction
+        //A
+        cout<<endl<<endl;
+        int SUB0 = 0 , SUB1 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                SUB0 -= A[i];
+            else
+                SUB1 -= A[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary SUB For Array 'A' : "<<SUB0 - SUB1<<endl;
+
+
+         //B
+        cout<<endl<<endl;
+        int SUB2 = 0 , SUB3 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                SUB2 -= B[i];
+            else
+                SUB3 -= B[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary SUB For Array 'B' : "<<SUB2 - SUB3<<endl;
+
+        //C
+        cout<<endl<<endl;
+        int SUB4 = 0 , SUB5 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                SUB4 -= C[i];
+            else
+                SUB5 -= C[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary SUB For Array 'C' : "<<SUB4 - SUB5<<endl;
+
+
+        //D
+        cout<<endl<<endl;
+        int SUB6 = 0 , SUB7 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                SUB6 -= D[i];
+            else
+                SUB7 -= D[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary SUB For Array 'D' : "<<SUB6 - SUB7<<endl;
+
+
+        //Binary Multiplication
+        //A
+        cout<<endl<<endl;
+        int MUL0 = 0 , MUL1 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                MUL0 -= A[i];
+            else
+                MUL1 -= A[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary MUL For Array 'A' : "<<MUL0 - MUL1<<endl;
+
+
+         //B
+        cout<<endl<<endl;
+        int MUL2 = 0 , MUL3 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                MUL2 -= B[i];
+            else
+                MUL3 -= B[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary MUL For Array 'B' : "<<MUL2 - MUL3<<endl;
+
+        //C
+        cout<<endl<<endl;
+        int MUL4 = 0 , MUL5 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                MUL4 -= C[i];
+            else
+                MUL5 -= C[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary MUL For Array 'C' : "<<MUL4 - MUL5<<endl;
+
+
+        //D
+        cout<<endl<<endl;
+        int MUL6 = 0 , MUL7 = 0;
+        for (int i = 0 ; i < n ; i++)
+        {
+
+            if (F[i] == 0)
+                MUL6 -= D[i];
+            else
+                MUL7 -= D[i];
+
+        }
+
+        cout<<endl;
+
+        cout<<"Binary MUL For Array 'D' : "<<MUL6 - MUL7<<endl;
+
+        //Array Concatenation
+        //POPULATE G
+        //Inserting A , B , C
+        for (int i = 0 ; i < n ; i++)
+        {
+            G[i] = A[i];
+        }
+
+       int b = 0;
+       for (int j = n ; j < p ; j++)
+        {
+            G[j] = B[b];
+            b++;
+        }
+
+       /*int c = 0;
+       for (int j = n ; j < p ; j++)
+        {
+            G[j] = C[c];
+            c++;
+        }*/
+
+      /*  //Inserting D
+        int d = 0;
+        for(int j = n ; j < p ; j++)
+        {
+            G[j] = D[d];
+            d++;
+        }*/
+
+        //DISPLAY G
+        cout<<endl<<endl;
+        cout<<"Array G Elements : ";
+        for (int i = 0 ; i < p ; i++)
+            cout<<G[i]<<" ";
+
+        //FREQUENCY
+
+        //POPULATE AND DISPLAY H
+        cout<<endl<<endl<<endl;
+        cout<<"Welcome To world of FREQUENCY -----"<<endl<<endl<<endl;
+        cout<<"Array H Elements : ";
+        int ex0ll= 0 , ex0ul = 7;
+        for (int i = 0; i < u ; i++)
+        {
+             H[i] = ex0ll + rand () % (ex0ul-ex0ll+1);
+             cout<<H[i]<<" ";
+        }
+
+        cout<<endl;
+
+        //INITIALIZE I ARRAY
+        for (int i = 0 ; i < s ; i++)
+            I[i] = 0;
+
+        //FREQUENCY DISTRIBUTION FOR H
+        for (int i = 0 ; i < u ; i++)
+        {
+            I[H[i]]++;
+        }
+
+        //DISPLAY I
+        cout<<endl;
+        for(int i = 0 ; i < s ; i++)
+        cout<<i<<" : "<<I[i]<<endl;
+
+        //INITIALIZE J ARRAY
+        for (int i = 0 ; i < yo ; i++)
+            J[i] = 0;
+
+        //FREQUENCY DISTRIBUTION FOR A
+        for (int i = 0 ; i < n ; i++)
+        {
+            J[A[i]]++;
+        }
+
+        //DISPLAY J
+        cout<<endl;
+        cout<<"Frequency Distribution For Array 'A' : "<<endl<<endl;
+        for(int i = 0 ; i < yo ; i++)
+        cout<<i<<" : "<<J[i]<<endl;
+
+
+        //INITIALIZE K ARRAY
+        for (int i = 0 ; i < yo ; i++)
+            K[i] = 0;
+
+        //FREQUENCY DISTRIBUTION FOR B
+        for (int i = 0 ; i < n ; i++)
+        {
+            K[B[i]]++;
+        }
+
+        //DISPLAY K
+        cout<<endl;
+        cout<<"Frequency Distribution For Array 'B' : "<<endl<<endl;
+        for(int i = 0 ; i < yo ; i++)
+        cout<<i<<" : "<<K[i]<<endl;
+
+
+       //INITIALIZE L ARRAY
+        for (int i = 0 ; i < yo ; i++)
+            L[i] = 0;
+
+        //FREQUENCY DISTRIBUTION FOR C
+        for (int i = 0 ; i < n ; i++)
+        {
+            L[C[i]]++;
+        }
+
+        //DISPLAY L
+        cout<<endl;
+        cout<<"Frequency Distribution For Array 'C' : "<<endl<<endl;
+        for(int i = 0 ; i < yo ; i++)
+        cout<<i<<" : "<<L[i]<<endl;
+
+
+        //INITIALIZE M ARRAY
+        for (int i = 0 ; i < yo ; i++)
+            M[i] = 0;
+
+        //FREQUENCY DISTRIBUTION FOR D
+        for (int i = 0 ; i < n ; i++)
+        {
+            M[D[i]]++;
+        }
+
+        //DISPLAY M
+        cout<<endl;
+        cout<<"Frequency Distribution For Array 'D' : "<<endl<<endl;
+        for(int i = 0 ; i < yo ; i++)
+        cout<<i<<" : "<<M[i]<<endl;
+
+
+       return 0;
+
+
+ }
